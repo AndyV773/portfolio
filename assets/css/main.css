@@ -23,12 +23,11 @@
 .profile-image img {
   width: 40%;
   height: 40%;
-  display: grid;
-  justify-self: end;
+  float: right;
+  margin: 20px;
   border-radius: 50%;
   object-fit: cover; 
-  border: 3px solid #fff;
-  box-shadow: 0 0 10px rgba(248, 247, 247, 0.2);
+  border: 3px solid rgb(255 255 255 / 55%);
 }
 
 html, body, div, span, applet, object,
