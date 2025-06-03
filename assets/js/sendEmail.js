@@ -2,11 +2,14 @@ function sendMail(contactForm, event) {
   // Check if form is valid
   if (!contactForm.checkValidity()) {
     contactForm.reportValidity(); // Show native validation messages
-    return false;  // Stop submission
+    return false;
   }
 
-  // Prevent the form from submitting normally
-  event.preventDefault();
+  // Disable the submit button
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+
+  event.preventDefault()
 
   // Send email via EmailJS
   emailjs.send("service_a5ubnxa", "template_xb2zlxg", {
@@ -14,17 +17,16 @@ function sendMail(contactForm, event) {
     "from_email": contactForm.email.value,
     "from_message": contactForm.message.value
   })
-  .then(
-    function(response) {
-      console.log("SUCCESS", response);
-      alert('Your message has been sent successfully!');
-      contactForm.reset();  // Clear form after success
-    },
-    function(error) {
-      console.log("FAILED", error);
-      alert('Oops! Something went wrong. Please try again.');
-    }
-  );
+  .then(() => {
+    alert('Your message has been sent successfully!');
+    contactForm.reset();
+  })
+  .catch(() => {
+    alert('Oops! Something went wrong. Please try again.');
+  })
+  .finally(() => {
+    submitButton.disabled = false;
+  });
 
   return false;  // Prevent default form submit
 }
