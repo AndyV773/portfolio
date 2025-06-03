@@ -23,8 +23,8 @@
 .profile-image img {
   width: 40%;
   height: 40%;
-  display: flex;
-  justify-self: flex-end;
+  display: grid;
+  justify-self: end;
   border-radius: 50%;
   object-fit: cover; 
   border: 3px solid #fff;
