@@ -31,6 +31,9 @@
 }
 
 .intro--icons {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
 	display: flex;
     justify-content: space-between;
     font-size: 3rem !important;
@@ -3125,7 +3128,8 @@ input, select, textarea {
 			-ms-justify-content: center;
 			justify-content: center;
 			width: 50em;
-			-ms-flex: 1;
+			-ms-flex: 1 1 50em; 
+			flex: 1 1 50em;
 		}
 
 			.spotlights > section > .content > .inner {
