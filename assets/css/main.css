@@ -228,6 +228,7 @@ input, select, textarea {
 
 	h1 {
 		font-size: 2.75em;
+		margin-top: 260px;
 	}
 
 		h1.major {
@@ -278,7 +279,6 @@ input, select, textarea {
 
 		h1 {
 			font-size: 2em;
-			margin-top: 100px;
 		}
 
 		h2 {
@@ -613,6 +613,10 @@ input, select, textarea {
 
 		@media screen and (max-width: 1680px) {
 
+			h1 {
+				margin-top: 220px;
+			}
+
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -857,6 +861,10 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
+
+			h1 {
+				margin-top: 200px;
+			}
 
 			.row {
 				display: flex;
@@ -1103,6 +1111,10 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
+			h1 {
+				margin-top: 160px;
+			}
+
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -1348,6 +1360,10 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
+			h1 {
+				margin-top: 100px;
+			}
+
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -1592,6 +1608,10 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 480px) {
+
+			h1 {
+				margin-top: 60px;
+			}
 
 			.row {
 				display: flex;
