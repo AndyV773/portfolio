@@ -1,0 +1,99 @@
+.max--width {
+    max-width: 200px !important;
+}
+
+.code-title {
+    position: absolute;
+    top: 16px;
+    left: 7px;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 70% !important;
+    font-weight: 900;
+    user-select: none;
+    cursor: default;   
+}
+
+.copy-msg {
+    position: absolute;
+    top: 30px;
+    right: 2px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 70%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+}
+
+.copy-msg.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.code-block {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.code-block pre {
+    width: 100%;
+    margin: 1em 0 1em 0 !important;
+}
+
+.code-block code {
+    padding: 0.5em !important;
+    margin: 0 !important;
+}
+
+.copy-icon {
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    cursor: pointer;
+    color: #666;
+    font-size: 1rem;
+}
+
+.fa-check {
+    color: chartreuse !important;
+    cursor: default !important;
+}
+
+.copy-icon:hover {
+    color: #fafafa;
+}
+
+@media (min-width: 1280px) {
+  .code-title {
+    top: 20px !important;
+    left: 10px !important;
+  }
+  .copy-msg {
+    top: 34px !important;
+    right: 4px !important;
+  }
+  .copy-icon {
+    top: 18px !important;
+    right: 10px !important;
+  }
+}
+
+@media (min-width: 1680px) {
+  .code-title {
+    top: 26px !important;
+    left: 12px !important;
+  }
+  .copy-msg {
+    top: 40px !important;
+  }
+  .copy-icon {
+    top: 22px !important;
+    right: 12px !important;
+  }
+}
