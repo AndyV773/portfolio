@@ -96,7 +96,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv install --list   </pre></code>
+                      <pre><code class="language-powershell">pyenv install --list   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Show all available Python versions to install
@@ -107,7 +108,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv install 3.12.1   </pre></code>
+                      <pre><code class="language-powershell">pyenv install 3.12.1   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Install a specific Python version
@@ -118,7 +120,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv uninstall 3.12.1   </pre></code>
+                      <pre><code class="language-powershell">pyenv uninstall 3.12.1   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Remove an installed version
@@ -129,7 +132,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv versions   </pre></code>
+                      <pre><code class="language-powershell">pyenv versions   </pre></code>
+                    </div>
                   </td>
                   <td>
                     List installed versions
@@ -140,7 +144,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv --version   </pre></code>
+                      <pre><code class="language-powershell">pyenv --version   </pre></code>
+                    </div>
                   </td>
                   <td>
                     List current running version
@@ -151,7 +156,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv global 3.12.1   </pre></code>
+                      <pre><code class="language-powershell">pyenv global 3.12.1   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Set global (default) Python version
@@ -162,7 +168,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv local 3.12.1   </pre></code>
+                      <pre><code class="language-powershell">pyenv local 3.12.1   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Set local Python version (per project directory)
@@ -173,7 +180,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv shell 3.12.1   </pre></code>
+                      <pre><code class="language-powershell">pyenv shell 3.12.1   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Temporarily set Python version for the shell
@@ -184,7 +192,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv rehash   </pre></code>
+                      <pre><code class="language-powershell">pyenv rehash   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Rebuild pyenv shims (usually automatic)
@@ -195,7 +204,8 @@
                     <div class="code-block">
                       <p class="copy-msg">Copied!</p>
                       <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">pyenv which python   </pre></code>
+                      <pre><code class="language-powershell">pyenv which python   </pre></code>
+                    </div>
                   </td>
                   <td>
                     Show full path to the selected Python binary
@@ -205,7 +215,7 @@
               <tfoot>
                 <tr>
                   <td>
-                    <a href="#">Top &#129093;</a>
+                    <a href="#">Top &uarr;</a>
                   </td>
                 </tr>
               </tfoot>
@@ -224,7 +234,7 @@
                   <p class="code-title">POWERSHELL</p>
                   <p class="copy-msg">Copied!</p>
                   <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">
+                  <pre><code class="language-powershell">
 mkdir $HOME/.pyenv</pre></code>
                 </div>
               </li>
@@ -237,7 +247,7 @@ mkdir $HOME/.pyenv</pre></code>
                   <p class="code-title">POWERSHELL</p>
                   <p class="copy-msg">Copied!</p>
                   <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">
+                  <pre><code class="language-powershell">
 [System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
 [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")</pre></code>
                 </div>
@@ -248,7 +258,7 @@ mkdir $HOME/.pyenv</pre></code>
                   <p class="code-title">POWERSHELL</p>
                   <p class="copy-msg">Copied!</p>
                   <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">
+                  <pre><code class="language-powershell">
 [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")</pre></code>
                 </div>
               </li>
@@ -276,7 +286,7 @@ mkdir $HOME/.pyenv</pre></code>
               <tfoot>
                 <tr>
                   <td>
-                    <a href="#">Top &#129093;</a>
+                    <a href="#">Top &uarr;</a>
                   </td>
                 </tr>
               </tfoot>
