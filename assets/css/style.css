@@ -3,36 +3,37 @@
 }
 
 .code-title {
-    position: absolute;
+    position: absolute !important;
     top: 16px;
     left: 7px;
     color: rgba(255, 255, 255, 0.15);
     font-size: 70% !important;
     font-weight: 900;
     user-select: none;
-    cursor: default;   
+    cursor: default;
+    z-index: 9999;
 }
 
 .copy-msg {
-    position: absolute;
-    top: 30px;
-    right: 2px;
-    transform: translate(-50%, -50%);
+    position: absolute !important;
+    top: 20px;
+    right: 28px;
     background: #333;
     color: #fff;
     padding: 0 8px;
     border-radius: 4px;
     font-size: 70%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 9999;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-out;
+    z-index: 9999 !important;
 }
 
 .copy-msg.show {
     opacity: 1;
     pointer-events: auto;
+    z-index: 9999;
 }
 
 .code-block {
@@ -52,12 +53,13 @@
 }
 
 .copy-icon {
-    position: absolute;
+    position: absolute !important;
     top: 16px;
     right: 8px;
     cursor: pointer;
     color: #666;
     font-size: 1rem;
+    z-index: 9999;
 }
 
 .fa-check {
@@ -75,8 +77,8 @@
     left: 10px !important;
   }
   .copy-msg {
-    top: 34px !important;
-    right: 4px !important;
+    top: 21px !important;
+    right: 30px !important;
   }
   .copy-icon {
     top: 18px !important;
@@ -90,7 +92,9 @@
     left: 12px !important;
   }
   .copy-msg {
-    top: 40px !important;
+    top: 26px !important;
+    margin-right: 5px;
+    /* right: 2px !important; */
   }
   .copy-icon {
     top: 22px !important;
