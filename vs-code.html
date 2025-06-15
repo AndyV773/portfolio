@@ -148,6 +148,11 @@
                     <td>Cmd + F</td>
                   </tr>
                   <tr>
+                    <td>Replace</td>
+                    <td>CTRL + H</td>
+                    <td>Cmd + H</td>
+                  </tr>
+                  <tr>
                     <td>Show Command Palette</td>
                     <td>CTRL + Shift + P or F1</td>
                     <td>Cmd + Shift + P or F1</td>
@@ -188,22 +193,53 @@
               </table>
             </section>
             <section>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Replace</th>
+                    <th>Windows/Linux</th>
+                    <th>macOS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Replace all variables in a file</td>
+                    <td>CTRL + H, enter variables, then press CTRL + Alt + Enter</td>
+                    <td>Cmd + H, enter variables, then press Cmd + Alt + Enter</td>
+                  </tr>
+                  <tr>
+                    <td>Replace all variables across all files</td>
+                    <td>CTRL + Shift + F, click the arrow next to the input box, enter variables, then press CTRL + Alt + Enter</td>
+                    <td>Cmd + Shift + F, click the arrow next to the input box, enter variables, then press Cmd + Alt + Enter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section>
               <h3>Terminal</h3>
               <ul>
                 <li>
-                  Starts a basic HTTP server:
+                  Starts a basic HTTP server.
                   <div class="code-block">
-                  <p class="copy-msg">Copied!</p>
-                  <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">python -m http.server</pre></code>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">python -m http.server</pre></code>
                   </div>
                 </li>
                 <li>
-                  Allows external devices on the same network to access your machine using its local IP address (e.g., 192.168.x.x):
+                  Allows external devices on the same network to access your machine using its local IP address (e.g, 192.168.x.x:8000). Uses port 8000 as the default.
                   <div class="code-block">
-                  <p class="copy-msg">Copied!</p>
-                  <i class="icon solid fa-copy copy-icon"></i>
-<pre><code class="language-powershell">python -m http.server --bind 0.0.0.0</pre></code>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">python -m http.server --bind 0.0.0.0</pre></code>
+                  </div>
+                </li>
+                <li>
+                  Use a custom port (192.168.x.x:5000).
+                  <div class="code-block">
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">python -m http.server --bind 0.0.0.0 5000</pre></code>
                   </div>
                 </li>
               </ul>

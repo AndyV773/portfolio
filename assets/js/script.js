@@ -21,9 +21,7 @@ if (copyIcon.length > 0) {
             }
 
             msg.classList.add('show');
-
-            icon.classList.remove('fa-copy');
-            icon.classList.add('fa-check');
+            icon.classList.add('check');
             icon.style.pointerEvents = "none";
 
             setTimeout(() => {
@@ -31,8 +29,7 @@ if (copyIcon.length > 0) {
             }, 1000); // 1 second
 
             setTimeout(() => {
-                icon.classList.remove('fa-check');
-                icon.classList.add('fa-copy');
+                icon.classList.remove('check');
                 icon.style.pointerEvents = "auto";
             }, 3000); // 3 seconds
         })

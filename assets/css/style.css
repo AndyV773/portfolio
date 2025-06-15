@@ -62,7 +62,7 @@
     z-index: 9999;
 }
 
-.fa-check {
+.check {
     color: chartreuse !important;
     cursor: default !important;
 }
