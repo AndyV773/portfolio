@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Andrew Veness | Dev Notes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="description"
+      content="Andrew Veness is a software developer specializing in full-stack projects, and machine learning. Get in touch today."
+    />
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Veness",
+        "url": "https://andyv.uk",
+        "sameAs": ["https://www.linkedin.com/in/andy-veness-4113a0309", "https://github.com/AndyV773"]
+      }
+    </script>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Andrew Veness - Full Stack Developer" />
+    <meta property="og:description" content="Check out my portfolio." />
+    <meta property="og:image" content="https://andyv.uk/images/main.jpg" />
+    <meta property="og:url" content="https://andyv.uk/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Andrew Veness - Full Stack Developer" />
+    <meta name="twitter:description" content="Check out my portfolio." />
+    <meta name="twitter:image" content="https://andyv.uk/images/main.jpg" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/icon" href="favicon_io/favicon.ico" />
+
+    <!-- Load Highlight.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css"
+    />
+    <!-- Load Highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">Andrew Veness</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learn-more.html">Learn More</a></li>
+          <li><a href="dev-notes.html" class="active">Dev Notes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <section id="main" class="wrapper">
+        <div class="inner">
+          <h1 class="major">Django</h1>
+          <!-- Table -->
+          <section>
+            <h2>How to install and set up Django</h2>
+            <div class="table-wrapper">
+              <ol>
+                <li>
+                  Ensure Python and pip are installed. If not installed
+                  <a href="https://python.org/downloads/">Download Python</a>, or install
+                  <a href="pyenv-win.html">PyEnv-Win</a>.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+python --version
+pip --version</code></pre>
+                  </div>
+                </li>
+                <li>
+                  In you project folder activate a virtual environment (recommended)
+                  <a href="venv.html">Virtual Environment (venv)</a>
+                </li>
+                <li>
+                  Install Django
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+pip install django</code></pre>
+                  </div>
+                </li>
+                <li>
+                  Verify installation
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+django-admin --version</code></pre>
+                  </div>
+                </li>
+                <li>
+                  After installing Django you can create a project. Replace 'myproject' with whatever name you like.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+django-admin startproject myproject</code></pre>
+                  </div>
+                </li>
+                <li>
+                  Use the cd command to change your current location in the terminal to your project folder. This lets
+                  you work inside that folder where your Django project files are. Replace 'myproject' with the name
+                  that you used.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+cd myproject</code></pre>
+                  </div>
+                </li>
+                <li>
+                  Once you are inside the folder containing manage.py (usually the project root), you can start the
+                  Django development server.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+python manage.py runserver</code></pre>
+                  </div>
+                </li>
+              </ol>
+              <h3> Django Database Management and Migrations </h3>
+              <ol>
+                <li>
+                  Detect model changes and prepare migration scripts.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+python manage.py makemigrations</code></pre>
+                  </div>
+                </li>
+                <li>
+                  Check what migrations will be created (Optional) useful for debugging.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+python manage.py makemigrations --dry-run</code></pre>
+                  </div>
+                </li>
+                <li>
+                  Update the database schema based on migration files.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+python manage.py migrate</code></pre>
+                  </div>
+                </li>
+                <li>
+                  View which migrations have been applied or are pending.
+                  <div class="code-block">
+                    <p class="code-title">SHELL</p>
+                    <p class="copy-msg">Copied!</p>
+                    <i class="icon fa-clone copy-icon"></i>
+                    <pre><code class="language-powershell">
+python manage.py showmigrations</code></pre>
+                  </div>
+                </li>
+              </ol>
+              <a href="#">Top &uarr;</a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>
+            &copy; Andrew Veness
+            <span id="year"></span>. All rights reserved.
+          </li>
+          <li>
+            Design:
+            <a href="https://html5up.net">HTML5 UP</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

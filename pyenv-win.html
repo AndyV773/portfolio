@@ -78,155 +78,174 @@
       <!-- Main -->
       <section id="main" class="wrapper">
         <div class="inner">
-          <h1 class="major">Dev Notes</h1>
+          <h1 class="major">PyEnv-Win</h1>
           <section>
-            <h2>PyEnv-win</h2>
-            <h3>Quick Commands</h3>
+            <h2>Quick Commands</h2>
             <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Command</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv install --list   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Show all available Python versions to install
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv install 3.12.1   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Install a specific Python version
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv uninstall 3.12.1   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Remove an installed version
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv versions   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    List installed versions
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv --version   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    List current running version
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv global 3.12.1   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Set global (default) Python version
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv local 3.12.1   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Set local Python version (per project directory)
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv shell 3.12.1   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Temporarily set Python version for the shell
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv rehash   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Rebuild pyenv shims (usually automatic)
-                  </td>
-                </tr>
-                <tr>
-                  <td class="max--width">
-                    <div class="code-block">
-                      <p class="copy-msg">Copied!</p>
-                      <i class="icon fa-clone copy-icon"></i>
-                      <pre><code class="language-powershell">pyenv which python   </pre></code>
-                    </div>
-                  </td>
-                  <td>
-                    Show full path to the selected Python binary
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td>
-                    <a href="#">Top &uarr;</a>
-                  </td>
-                </tr>
-              </tfoot>
-            </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv install --list</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Show all available Python versions to install
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv install 3.12.1</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Install a specific Python version
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv uninstall 3.12.1</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Remove an installed version
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv versions</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      List installed versions
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv --version</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      List current running version
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv global 3.12.1</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Set global (default) Python version
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv local 3.12.1</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Set local Python version (per project directory)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv shell 3.12.1</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Temporarily set Python version for the shell
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv rehash</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Rebuild pyenv shims (usually automatic)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="max--width">
+                      <div class="code-block">
+                        <p class="code-title">SHELL</p>
+                        <p class="copy-msg">Copied!</p>
+                        <i class="icon fa-clone copy-icon"></i>
+                        <pre><code class="language-powershell">
+pyenv which python</pre></code>
+                      </div>
+                    </td>
+                    <td>
+                      Show full path to the selected Python binary
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>
+                      <a href="#">Top &uarr;</a>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
           </section>
           <section>
             <h3>How to Install PyEnv on Windows</h3>
             <ol>
               <li>
-                  Download pyenv-win ZIP-archive: <a class="y-text" href="https://github.com/pyenv-win/pyenv-win/archive/master.zip">pyenv-win</a>
+                Download pyenv-win ZIP-archive: <a class="y-text" href="https://github.com/pyenv-win/pyenv-win/archive/master.zip">pyenv-win</a>
               </li>
               <li>
                 Create a new folder .pyenv in your user folder with the name .pyenv. You can do this using the Explorer or the following PowerShell command:
@@ -242,7 +261,7 @@ mkdir $HOME/.pyenv</pre></code>
                 Extract the ZIP-archive and copy the pyenv-win folder and the .version file from the pyenv-win-master folder into the newly created .pyenv folder in your user folder.
               </li>
               <li>
-                Set the environment variables PYENV and PYENV_HOME that point to the installation folder:
+                Set the environment variables PYENV and PYENV_HOME that point to the installation folder.
                 <div class="code-block">
                   <p class="code-title">POWERSHELL</p>
                   <p class="copy-msg">Copied!</p>
@@ -262,7 +281,35 @@ mkdir $HOME/.pyenv</pre></code>
 [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")</pre></code>
                 </div>
               </li>
-            </ol>        
+              <li>Open PowerShell as an administrator, press <code>Windows + R</code>, type 'powershell', then press <code>Ctrl + Shift + Enter</code> to launch it with administrative privileges.</li>
+              <li>
+                Enter the following command into the PowerShell to enable the execution of scripts. Press A to choose Yes to ALL. Afterward, you can close this PowerShell window and open a new one without admin privileges.
+                <div class="code-block">
+                  <p class="code-title">POWERSHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+Set-ExecutionPolicy unrestricted</code></pre>
+              </li>
+              <li>
+                Now, you can run pyenv by entering.
+                <div class="code-block">
+                  <p class="code-title">POWERSHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+pyenv</code></pre>
+              </li>
+              <li>
+                If you encounter a security warning from where you have to choose if you want to run pyenv you can disable this warning by “unblocking” the pyenv script with the following command.
+                <div class="code-block">
+                  <p class="code-title">POWERSHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+Unblock-File $HOME/.pyenv/pyenv-win/bin/pyenv.ps1</code></pre>
+              </li>
+            </ol>
           </section>
           <section>
             <table>
