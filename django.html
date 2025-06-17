@@ -82,123 +82,177 @@
           <!-- Table -->
           <section>
             <h2>How to install and set up Django</h2>
-            <div class="table-wrapper">
-              <ol>
-                <li>
-                  Ensure Python and pip are installed. If not installed
-                  <a href="https://python.org/downloads/">Download Python</a>, or install
-                  <a href="pyenv-win.html">PyEnv-Win</a>.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+            <ol>
+              <li>
+                Ensure Python and pip are installed. If not installed
+                <a href="https://python.org/downloads/">Download Python</a>, or install
+                <a href="pyenv-win.html">PyEnv-Win</a>.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 python --version
 pip --version</code></pre>
-                  </div>
-                </li>
-                <li>
-                  In you project folder activate a virtual environment (recommended)
-                  <a href="venv.html">Virtual Environment (venv)</a>
-                </li>
-                <li>
-                  Install Django
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                In you project folder activate a virtual environment (recommended)
+                <a href="venv.html">Virtual Environment (venv)</a>
+              </li>
+              <li>
+                Install Django
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 pip install django</code></pre>
-                  </div>
-                </li>
-                <li>
-                  Verify installation
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                Verify installation
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 django-admin --version</code></pre>
-                  </div>
-                </li>
-                <li>
-                  After installing Django you can create a project. Replace 'myproject' with whatever name you like.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                After installing Django you can create a project. Replace 'myproject' with whatever name you like.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 django-admin startproject myproject</code></pre>
-                  </div>
-                </li>
-                <li>
-                  Use the cd command to change your current location in the terminal to your project folder. This lets
-                  you work inside that folder where your Django project files are. Replace 'myproject' with the name
-                  that you used.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                Use the cd command to change your current location in the terminal to your project folder. This lets you
+                work inside that folder where your Django project files are. Replace 'myproject' with the name that you
+                used.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 cd myproject</code></pre>
-                  </div>
-                </li>
-                <li>
-                  Once you are inside the folder containing manage.py (usually the project root), you can start the
-                  Django development server.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                Once you are inside the folder containing manage.py (usually the project root), you can start the Django
+                development server.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 python manage.py runserver</code></pre>
-                  </div>
-                </li>
-              </ol>
-              <h3> Django Database Management and Migrations </h3>
-              <ol>
-                <li>
-                  Detect model changes and prepare migration scripts.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                This command creates a new Django app named myapp within your project (you can name it whatever you
+                like).
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+python manage.py startapp myapp</code></pre>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3> Django Database Management and Migrations </h3>
+            <ol>
+              <li>
+                Detect model changes and prepare migration scripts.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 python manage.py makemigrations</code></pre>
-                  </div>
-                </li>
-                <li>
-                  Check what migrations will be created (Optional) useful for debugging.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                Check what migrations will be created (Optional) useful for debugging.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 python manage.py makemigrations --dry-run</code></pre>
-                  </div>
-                </li>
-                <li>
-                  Update the database schema based on migration files.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                Update the database schema based on migration files.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 python manage.py migrate</code></pre>
-                  </div>
-                </li>
-                <li>
-                  View which migrations have been applied or are pending.
-                  <div class="code-block">
-                    <p class="code-title">SHELL</p>
-                    <p class="copy-msg">Copied!</p>
-                    <i class="icon fa-clone copy-icon"></i>
-                    <pre><code class="language-powershell">
+                </div>
+              </li>
+              <li>
+                View which migrations have been applied or are pending.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
 python manage.py showmigrations</code></pre>
-                  </div>
-                </li>
-              </ol>
-              <a href="#">Top &uarr;</a>
+                </div>
+              </li>
+            </ol>
+            <a href="#">Top &uarr;</a>
+          </section>
+
+          <section>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Quick Links</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="assets/pdf/cs/Django Cheat Sheet.pdf" target="_blank">
+                        Django Cheat Sheet (Code Institute)
+                      </a>
+                    </td>
+                    <td>PDF</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://docs.djangoproject.com/en/5.2/"
+                        alt="takes you to another website"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Django Documentation
+                      </a>
+                    </td>
+                    <td>Docs</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>
+                      <a href="#">Top &uarr;</a>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
           </section>
         </div>
