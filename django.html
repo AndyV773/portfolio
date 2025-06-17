@@ -50,6 +50,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <!-- Language support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -79,9 +80,8 @@
       <section id="main" class="wrapper">
         <div class="inner">
           <h1 class="major">Django</h1>
-          <!-- Table -->
           <section>
-            <h2>How to install and set up Django</h2>
+            <h2>How to Install Django and Create a Project</h2>
             <ol>
               <li>
                 Ensure Python and pip are installed. If not installed
@@ -111,7 +111,7 @@ pip install django</code></pre>
                 </div>
               </li>
               <li>
-                Verify installation
+                Can verify installation by checking the current version
                 <div class="code-block">
                   <p class="code-title">SHELL</p>
                   <p class="copy-msg">Copied!</p>
@@ -121,13 +121,23 @@ django-admin --version</code></pre>
                 </div>
               </li>
               <li>
+                It's a good habit (though optional) to save your installed packages.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+pip freeze > requirements.txt</code></pre>
+                </div>
+              </li>
+              <li>
                 After installing Django you can create a project. Replace 'myproject' with whatever name you like.
                 <div class="code-block">
                   <p class="code-title">SHELL</p>
                   <p class="copy-msg">Copied!</p>
                   <i class="icon fa-clone copy-icon"></i>
                   <pre><code class="language-powershell">
-django-admin startproject myproject</code></pre>
+django-admin startproject myproject .</code></pre>
                 </div>
               </li>
               <li>
@@ -153,9 +163,25 @@ cd myproject</code></pre>
 python manage.py runserver</code></pre>
                 </div>
               </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Creating a new App</h3>
+            <ol>
               <li>
                 This command creates a new Django app named myapp within your project (you can name it whatever you
                 like).
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+python manage.py startapp myapp</code></pre>
+                </div>
+              </li>
+              <li>
+                Add the new app to installed apps within the settings.py file
                 <div class="code-block">
                   <p class="code-title">SHELL</p>
                   <p class="copy-msg">Copied!</p>
@@ -168,7 +194,7 @@ python manage.py startapp myapp</code></pre>
           </section>
 
           <section>
-            <h3> Django Database Management and Migrations </h3>
+            <h3> Django Database Management and Migrations</h3>
             <ol>
               <li>
                 Detect model changes and prepare migration scripts.
@@ -178,6 +204,17 @@ python manage.py startapp myapp</code></pre>
                   <i class="icon fa-clone copy-icon"></i>
                   <pre><code class="language-powershell">
 python manage.py makemigrations</code></pre>
+                </div>
+              </li>
+              <li>
+                Use this to generate migration files only for the app you are working on, rather than scanning the
+                entire project.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+python manage.py makemigrations myapp</code></pre>
                 </div>
               </li>
               <li>
@@ -201,6 +238,17 @@ python manage.py migrate</code></pre>
                 </div>
               </li>
               <li>
+                This command runs the database migrations only for the specified app (myapp), instead of applying
+                migrations for all installed apps in the project.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+python manage.py migrate myapp</code></pre>
+                </div>
+              </li>
+              <li>
                 View which migrations have been applied or are pending.
                 <div class="code-block">
                   <p class="code-title">SHELL</p>
@@ -211,7 +259,57 @@ python manage.py showmigrations</code></pre>
                 </div>
               </li>
             </ol>
-            <a href="#">Top &uarr;</a>
+            <h4>Debugging Migrations</h4>
+            <ol>
+              <li>
+                This command rolls back all migrations.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+python manage.py migrate zero</code></pre>
+                </div>
+              </li>
+              <li>
+                This command rolls back all migrations for the specified app (myapp), returning it to its initial state.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+python manage.py migrate myapp zero</code></pre>
+                </div>
+              </li>
+              <li>
+                Deletes all data from the database across all apps, while keeping the database schema and applied
+                migrations intact.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-powershell">
+python manage.py flush</code></pre>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Create a Superuser</h3>
+            <ul>
+              <li>
+                Once you've created an app, you can create a superuser. An admin account with full access to the Django
+                admin panel. This account includes a username, email, and password, which you'll use to log in.
+                <div class="code-block">
+                  <p class="code-title">SHELL</p>
+                  <p class="copy-msg">Copied!</p>
+                  <i class="icon fa-clone copy-icon"></i>
+                  <pre><code class="language-bash">
+python manage.py createsuperuser</code></pre>
+                </div>
+              </li>
+            </ul>
           </section>
 
           <section>
@@ -242,7 +340,7 @@ python manage.py showmigrations</code></pre>
                         Django Documentation
                       </a>
                     </td>
-                    <td>Docs</td>
+                    <td>DOCS</td>
                   </tr>
                 </tbody>
                 <tfoot>

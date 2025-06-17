@@ -67,6 +67,10 @@
     cursor: default !important;
 }
 
+code {
+  color: chartreuse !important;
+}
+
 @media (min-width: 1280px) {
   .code-title {
     top: 20px !important;
@@ -99,7 +103,7 @@
     margin-right: 5px;
     /* right: 2px !important; */
   }
-  
+
   .copy-icon {
     top: 22px !important;
     right: 12px !important;
