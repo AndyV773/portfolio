@@ -1,3 +1,4 @@
+/* global emailjs */
 function sendMail(contactForm, event) {
   // Check if form is valid
   if (!contactForm.checkValidity()) {
@@ -9,7 +10,7 @@ function sendMail(contactForm, event) {
   const submitButton = contactForm.querySelector('button[type="submit"]');
   submitButton.disabled = true;
 
-  event.preventDefault()
+  event.preventDefault();
 
   // Send email via EmailJS
   emailjs.send("service_a5ubnxa", "template_xb2zlxg", {

@@ -4,11 +4,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
   <head>
     <title>Andrew Veness | Software Developer</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
       content="Andrew Veness is a software developer specializing in full-stack projects, and machine learning. Get in touch today."
@@ -44,10 +44,11 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- email js cdn -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+    <script>
       (function () {
         emailjs.init({
           publicKey: "OV7TuaOdwTQ7yrWjx",
@@ -57,7 +58,7 @@
   </head>
   <body class="is-preload">
     <!-- Sidebar -->
-    <section id="sidebar">
+    <header id="sidebar">
       <div class="inner">
         <nav>
           <ul>
@@ -68,15 +69,15 @@
           </ul>
         </nav>
       </div>
-    </section>
+    </header>
 
     <!-- Wrapper -->
-    <div id="wrapper">
+    <main id="wrapper">
       <!-- Intro -->
       <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
           <div class="profile-image">
-            <img src="images/my-image.jpg" alt="Profile picture" />
+            <img src="/assets/images/my-image.avif" alt="Profile picture" />
           </div>
           <h1>Andrew Veness</h1>
           <p>
@@ -88,14 +89,14 @@
           </p>
           <ul class="actions">
             <li>
-              <a href="assets/pdf/cv/veness-web-cv.pdf" target="_blank" class="button scrolly">Download CV</a>
+              <a href="/assets/pdf/cv/veness-web-cv.pdf" target="_blank" class="button scrolly">Download CV</a>
             </li>
           </ul>
         </div>
       </section>
 
       <!-- One -->
-      <section id="one" class="wrapper style2 spotlights">
+      <div id="one" class="wrapper style2 spotlights">
         <section id="experience">
           <div class="content w--100 experience-fade">
             <div class="inner">
@@ -106,7 +107,7 @@
                     <a
                       href="https://7-8.dev"
                       class="button"
-                      alt="takes you to my other website"
+                      title="takes you to my other website"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -126,7 +127,7 @@
                   <a
                     href="https://7-8.dev"
                     class="button"
-                    alt="takes you to my other website"
+                    title="takes you to my other website"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -139,7 +140,11 @@
         </section>
         <section>
           <a href="#" class="image">
-            <img src="images/pic04.jpg" alt="" data-position="center center" />
+            <img
+              src="/assets/images/full-stack.avif"
+              alt="Full stack developer module illustration by Freepik"
+              data-position="center center"
+            />
           </a>
           <div class="content">
             <div class="inner">
@@ -167,17 +172,24 @@
                 <a
                   href="https://github.com/AndyV773/pp4"
                   class="button"
-                  alt="takes you to github"
+                  title="takes you to my github"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >View GitHub</a
                 >
+                  View on GitHub
+                </a>
               </li>
             </ul>
           </div>
         </section>
         <section>
-          <a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+          <a href="#" class="image">
+            <img
+              src="/assets/images/python.avif"
+              alt="Python machine learning code by Freepik"
+              data-position="top center"
+            />
+          </a>
           <div class="content">
             <div class="inner">
               <h2>Data Analysis & Predictive Analytics / Machine Learning</h2>
@@ -196,17 +208,20 @@
                 <a
                   href="https://github.com/AndyV773/PP5"
                   class="button"
-                  alt="takes you to github"
+                  title="takes you to my github"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >View GitHub</a
                 >
+                  View on GitHub
+                </a>
               </li>
             </ul>
           </div>
         </section>
         <section>
-          <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+          <a href="#" class="image">
+            <img src="/assets/images/github.avif" alt="Github image made via Grok" data-position="25% 25%" />
+          </a>
           <div class="content">
             <div class="inner">
               <h2>Software Development Practices</h2>
@@ -223,11 +238,21 @@
               </ul>
             </div>
             <ul class="actions">
-              <li><a href="learn-more.html" class="button">Learn more</a></li>
+              <li>
+                <a
+                  href="https://github.com/AndyV773"
+                  class="button"
+                  title="takes you to my github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View my GitHub
+                </a>
+              </li>
             </ul>
           </div>
         </section>
-      </section>
+      </div>
 
       <!-- Two -->
       <section id="two" class="wrapper style3 fade-up">
@@ -300,7 +325,7 @@
             looking to work together, have a project in mind, or want to connect — feel free to reach out.
           </p>
           <div class="split style1">
-            <section>
+            <div>
               <form onsubmit="return sendMail(this, event);">
                 <div class="fields">
                   <div class="field half">
@@ -329,8 +354,8 @@
                   <li><button type="submit" class="button submit">Send Message</button></li>
                 </ul>
               </form>
-            </section>
-            <section>
+            </div>
+            <div>
               <ul class="contact">
                 <li>
                   <h3>Address</h3>
@@ -344,7 +369,7 @@
                 </li>
                 <li>
                   <h3>Email</h3>
-                  <a href="mailto:contact@andyv.uk?subject=Hello&body=I wanted to contact you about...">
+                  <a href="mailto:contact@andyv.uk?subject=Hello&body=I%20wanted%20to%20contact%20you%20about...">
                     contact@andyv.uk
                   </a>
                 </li>
@@ -384,11 +409,11 @@
                   </ul>
                 </li>
               </ul>
-            </section>
+            </div>
           </div>
         </div>
       </section>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer id="footer" class="wrapper style1-alt">

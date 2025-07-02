@@ -1,111 +1,63 @@
-.max--width {
-    max-width: 200px !important;
+.profile-image img {
+  width: 40%;
+  height: 40%;
+  float: right;
+  margin: 20px;
+  border-radius: 50%;
+  object-fit: cover; 
+  border: 3px solid rgb(255 255 255 / 55%);
 }
 
-.code-title {
-    position: absolute !important;
-    top: 16px;
-    left: 7px;
-    color: rgba(255, 255, 255, 0.15);
-    font-size: 70% !important;
-    font-weight: 900;
-    user-select: none;
-    cursor: default;
-    z-index: 9999;
+.intro--icons {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+	display: flex;
+  justify-content: space-between;
+  font-size: 3rem !important;
+  margin: 1rem;
 }
 
-.copy-msg {
-    position: absolute !important;
-    top: 20px;
-    right: 28px;
-    background: #333;
-    color: #fff;
-    padding: 0 8px;
-    border-radius: 4px;
-    font-size: 70%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-out;
-    z-index: 9999 !important;
+#experience {
+	background-color: #000;
+	min-height: unset;
 }
 
-.copy-msg.show {
-    opacity: 1;
-    pointer-events: auto;
-    z-index: 9999;
+.experience-fade {
+  background-image: url("/assets/images/kali-linux.avif");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
-.code-block {
-    position: relative;
+.w--100 {
+	width: 100% !important;
+}
+
+.y-text {
+	color: rgb(156 173 70 / 58%);
+}
+
+@media (min-width: 1024px) {
+  .experience-fade {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 480px) {
+  .dev-notes1 {
+	  display: none !important;
+  }
+}
+
+@media (min-width: 480px) {
+  .pro-flex {
     display: flex;
-    width: 100%;
-}
-
-.code-block pre {
-    width: 100%;
-    margin: 1em 0 1em 0 !important;
-}
-
-.code-block code {
-    padding: 0.5em !important;
-    margin: 0 !important;
-}
-
-.copy-icon {
-    position: absolute !important;
-    top: 16px;
-    right: 8px;
-    cursor: pointer;
-    color: #666;
-    font-size: 1rem;
-    z-index: 9999;
-}
-
-.check {
-    color: chartreuse !important;
-    cursor: default !important;
-}
-
-code {
-  color: chartreuse !important;
-}
-
-@media (min-width: 1280px) {
-  .code-title {
-    top: 20px !important;
-    left: 10px !important;
+	  justify-content: space-between;
   }
-
-  .copy-msg {
-    top: 21px !important;
-    right: 30px !important;
-  }
-
-  .copy-icon {
-    top: 18px !important;
-    right: 10px !important;
-  }
-
-  .copy-icon:hover {
-    color: #fafafa;
-}
-}
-
-@media (min-width: 1680px) {
-  .code-title {
-    top: 26px !important;
-    left: 12px !important;
-  }
-
-  .copy-msg {
-    top: 26px !important;
-    margin-right: 5px;
-    /* right: 2px !important; */
-  }
-
-  .copy-icon {
-    top: 22px !important;
-    right: 12px !important;
+  .dev-notes2 {
+	  display: none !important;
   }
 }
